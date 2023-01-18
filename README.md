@@ -27,7 +27,7 @@ CMD ["npm", "run", "develop"]
 
 .dockerignore"
 >>>>>>>
-.temp/
+.tmp/
 .cache/
 .git/
 build/
