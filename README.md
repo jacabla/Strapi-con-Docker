@@ -1,3 +1,20 @@
+J@SON NOTA PARA CONFIGURAR STRAPI CON DOCKER
+1. Crear la app con Strapi --->.  create-strapi-app (nombre proyecto) --quickstart
+
+2. Entrar con el cd a la carpeta del proyecto
+
+3. A VECES AL HACER EL DOCKER DA ERRORES ENTONCES PONER ESTE COMAND LINE npm i --package-lock-only
+
+4. Crear el contenedor de docker docker build -t (nombre):latest
+*En este punto ya se deberia ver en el Docker desktop
+
+5. Correr el contenedor con el puerto 1337
+docker run -d -p1337:1337 (nombrearhivo)
+
+El navegadore deberia abrirle un tab con el Admin de Strapi
+
+GO NUTS!
+
 # 🚀 Getting started with Strapi
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
