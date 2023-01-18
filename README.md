@@ -5,6 +5,36 @@ J@SON NOTA PARA CONFIGURAR STRAPI CON DOCKER
 
 ***CREAR EL Dockerfile y .dockerignore****
 
+Dockerfile:
+>>>>>>>>
+# path: ./Dockerfile
+
+FROM node:16-alpine
+# Installing libvips-dev for sharp Compatibility
+RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev
+ARG NODE_ENV=development
+ENV NODE_ENV=${NODE_ENV}
+WORKDIR /opt/
+COPY ./package.json ./package-lock.json ./
+ENV PATH /opt/node_modules/.bin:$PATH
+RUN npm install
+WORKDIR /opt/app
+COPY ./ .
+RUN npm run build
+EXPOSE 1337
+CMD ["npm", "run", "develop"]
+<<<<<<<
+
+.dockerignore"
+>>>>>>>
+.temp/
+.cache/
+.git/
+build/
+node_modules/
+data/
+<<<<<<<<
+
 3. A VECES AL HACER EL DOCKER DA ERRORES ENTONCES PONER ESTE COMAND LINE npm i --package-lock-only
 
 4. Crear el contenedor de docker docker build -t (nombre):latest
