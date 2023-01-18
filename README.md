@@ -3,6 +3,8 @@ J@SON NOTA PARA CONFIGURAR STRAPI CON DOCKER
 
 2. Entrar con el cd a la carpeta del proyecto
 
+***CREAR EL Dockerfile y .dockerignore****
+
 3. A VECES AL HACER EL DOCKER DA ERRORES ENTONCES PONER ESTE COMAND LINE npm i --package-lock-only
 
 4. Crear el contenedor de docker docker build -t (nombre):latest
